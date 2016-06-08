@@ -10,7 +10,7 @@
     <div class="container" ng-controller="MainCtrl">
       <h1>{{ title }}</h1>
       <ul>
-        <li ng-repeat="item in groceryList">{{ item.name }}</li>
+        <li ng-repeat="item in groceryList">{{ item.name }} <span ng-click="deleteItem($index)" class="glyphicon glyphicon-trash" aria-hidden="true"></span></li>
       </ul>
       <form ng-submit="addItem()">
         <div class="form-group">
