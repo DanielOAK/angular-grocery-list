@@ -30,9 +30,12 @@ app.controller('MainCtrl', ['$scope', function($scope) {
   $scope.deleteItem = function(index) {
     // Get the index of the clicked item
     // delete one item from the array starting at that index
-    console.log(index);
     $scope.groceryList.splice(index, 1);
-    console.log("did it!");
+  
+  };
+  $scope.editItem = function (index) {
+    //grab indexed item and display in label to be edited
+    $scope.groceryList.push(index, 1);
   };
 }]);
 
